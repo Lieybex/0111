@@ -1,0 +1,144 @@
+/* 基本重置與字體設定 */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body {
+    font-family: "Microsoft JhengHei", "PingFang TC", sans-serif;
+    line-height: 1.6;
+    color: #333;
+    background-color: #f4f7f6; /* 淺灰色底 */
+}
+
+.container {
+    max-width: 960px;
+    margin: 0 auto;
+    padding: 0 20px;
+}
+
+/* 標題區塊 */
+header {
+    /* 1. 設定背景圖片路徑 */
+    background-image: linear-gradient(rgba(0, 0, 0, 0.4), rgba(0, 0, 0, 0.4)), url('images/taimage.png');
+    
+    /* 2. 讓圖片覆蓋整個區域並置中 */
+    background-size: cover;
+    background-position: center;
+    background-attachment: fixed; /* 捲動時有視差效果，若不喜歡可刪除 */
+    
+    color: #ffffff;
+    padding: 100px 0; /* 增加上下間距讓圖片露出來更多 */
+    text-align: center;
+    border-bottom: 8px solid #4a7c44;
+}
+
+/* 為了讓圖片上的文字更清晰，可以幫文字加一點陰影 */
+header h1 {
+    font-size: 2.8rem;
+    margin-bottom: 15px;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.7);
+}
+
+header p {
+    font-size: 1.2rem;
+    text-shadow: 1px 1px 3px rgba(0, 0, 0, 0.7);
+}
+
+/* 內容區塊通用樣式 */
+section {
+    padding: 40px 0;
+}
+
+h2 {
+    color: #1a4d6e;
+    border-left: 5px solid #4a7c44;
+    padding-left: 15px;
+    margin-bottom: 20px;
+    font-size: 1.8rem;
+}
+
+.content-box {
+    background: #fff;
+    padding: 30px;
+    border-radius: 8px;
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05);
+}
+
+.content-box p {
+    margin-bottom: 15px;
+}
+
+ul {
+    list-style: none;
+}
+
+ul li {
+    padding: 10px 0;
+    border-bottom: 1px dashed #ddd;
+}
+
+/* 按鈕樣式 */
+.text-center {
+    text-align: center;
+}
+
+.btn-group {
+    margin-top: 25px;
+    display: flex;
+    justify-content: center;
+    gap: 20px;
+    flex-wrap: wrap;
+}
+
+.btn {
+    display: inline-block;
+    padding: 12px 30px;
+    text-decoration: none;
+    border-radius: 50px;
+    font-weight: bold;
+    transition: transform 0.2s, background-color 0.2s;
+}
+
+.btn:hover {
+    transform: translateY(-3px);
+}
+
+.btn-primary {
+    background-color: #1a4d6e;
+    color: white;
+}
+
+.btn-primary:hover {
+    background-color: #133a54;
+}
+
+.btn-secondary {
+    background-color: #4a7c44;
+    color: white;
+}
+
+.btn-secondary:hover {
+    background-color: #365c32;
+}
+
+/* 頁尾 */
+footer {
+    text-align: center;
+    padding: 30px 0;
+    background: #333;
+    color: #ccc;
+    font-size: 0.9rem;
+    margin-top: 40px;
+}
+
+/* 響應式微調 */
+@media (max-width: 600px) {
+    header h1 {
+        font-size: 1.8rem;
+    }
+    .btn {
+        width: 100%;
+    }
+}
